@@ -1,0 +1,122 @@
+1. На уроке объяснили постфикс и префикс.
+2. = 5
+3. Объявить две целочисленные переменные — a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+если a и b положительные, вывести их разность;
+если а и b отрицательные, вывести их произведение;
+если а и b разных знаков, вывести их сумму;
+
+<script>
+var a = 5;
+var b = 42;
+if(a >= 0 && b >= 0) {
+	var c = a - b;
+   alert(c);
+}else if (a < 0 && b < 0) {
+var c = a + b;
+   alert(c);
+	} else {
+		var c = a + b;
+   alert(c);
+	}
+
+
+
+  </script>
+
+ 4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.
+
+<script>
+  var a = '14';
+switch (a){
+   	case '0':
+   		alert('0');
+	case '1':
+   		alert('1');
+	case '2':
+   		alert('2');
+   	case '3':
+   		alert('3');
+   	case '4':
+   		alert('4');
+   	case '5':
+   		alert('5');
+   	case '6':
+   		alert('6');
+   	case '7':
+   		alert('7');
+   	case '8':
+   		alert('8');
+   	case '9':
+   		alert('9');
+   	case '10':
+   		alert('10');
+   	case '11':
+   		alert('11');
+   	case '12':
+   		alert('12');
+   	case '13':
+   		alert('13');
+   	case '14':
+   		alert('14');
+	default:
+   		alert('15');
+   break;
+}
+</script>
+
+5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+
+<script>
+	var d;
+
+function summation(arg1, arg2)
+{
+   d = arg1 + arg2;
+	alert (d);
+   	return d;
+}
+function subtraction(arg1, arg2)
+{
+   d = arg1 - arg2;
+	alert (d);
+   	return d;
+}
+function multiplication(arg1, arg2)
+{
+	d = arg1 * arg2;
+	alert (d);
+  	 return d;
+}
+function division(arg1, arg2)
+{
+  d = arg1 / arg2;
+	alert (d);
+   	return d;
+}
+
+</script>
+
+6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+
+<script>
+
+function mathOperation(arg1, arg2, operation)
+{
+	switch (operation){
+   	case 'summation':
+   		summation(arg1, arg2);
+   		break;
+	case 'subtraction':
+   		subtraction(arg1, arg2);
+   		break;
+	case 'multiplication':
+   		multiplication(arg1, arg2);
+   		break;
+   	case 'division':
+   		division(arg1, arg2);
+   		break;
+   	}
+}
+
+mathOperation(4, 2, 'summation')
+</script>
